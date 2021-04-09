@@ -10,6 +10,13 @@
 " assoc .vims=vimsession
 " ftype vimsession="C:\Program Files (x86)\Vim\vim81\gvim.exe" -S "%1" 
 
+" Figure out where the vimfiles directory is
+if has('win32')
+    let $MYVIMDIR = $HOME."/vimfiles/"
+else
+    let $MYVIMDIR = $HOME."/.vim/"
+endif
+
 
 "==== vim plug ====
 " Update this list and run PlugInstall or PlugUpdate or PlugClean
@@ -96,10 +103,10 @@ set clipboard=unnamed
 set splitbelow splitright
 
 " Set the swap file directory so it doesn't put them in the current directory
-set directory=$HOME/vimfiles/swapfiles//
+set directory=$MYVIMDIR/swapfiles//
 
 " Set an undo directory for persistant undo
-set undodir=~/vimfiles/undodir
+set undodir=$MYVIMDIR/undodir
 set undofile
 
 " Use the 'simalt' command when alt+space is pressed
@@ -149,8 +156,8 @@ let maplocalleader='-'
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>eh :vsplit $HOME\vimfiles\doc\cheatsheet.txt<cr>
-nnoremap <leader>sh :helptags $HOME\vimfiles\doc<cr>
+nnoremap <leader>eh :vsplit $MYVIMDIR/doc/cheatsheet.txt<cr>
+nnoremap <leader>sh :helptags $MYVIMDIR/doc<cr>
 
 " Tab shortcuts
 nnoremap <leader>t :tabnew<cr>
@@ -270,7 +277,7 @@ endfunction
 
 function! LoadTags(rel)
     set tags=
-    for i in split(glob('~\vimfiles\tags\' . a:rel .'\*.tags'),'\n')
+    for i in split(glob($MYVIMDIR.'/tags/' . a:rel .'/*.tags'),'\n')
         execute 'set tags+=' . l:i
     endfor
 endfunction
