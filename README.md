@@ -1,2 +1,2 @@
 # dotfiles
-My config files for various things
+This repository holds all my "dotfiles". These are various config files, like .vimrc, .bashrc, etc
