@@ -9,8 +9,13 @@ A bare-bones bashrc file. There's basically no custom configuration here yet.
 
 ## AccessibilityShortcuts.ahk
 An autohotkey script that adds a few shortcuts that help me use my PC more efficiently.
-  | Shortcut      | Description                                                        | 
-  | ------------- | ------------------------------------------------------------------ |
-  | `Win+F`       | Centers the mouse on the primary monitor                           |
-  | `Win+Shift+F` | Centers the mouse on the secondary monitor (defined in the script) |
-  | `Win+Ctrl+F`  | Moves the mouse between each monitor                               |
+  | Shortcut       | Description                                                        | 
+  | -------------- | ------------------------------------------------------------------ |
+  | `Win+F`        | Centers the mouse on the primary monitor                           |
+  | `Win+Shift+F`  | Centers the mouse on the secondary monitor (defined in the script) |
+  | `Win+Ctrl+F`   | Moves the mouse between each monitor                               |
+  | `zoom`         | Activates/Zooms in Magnifier                                       |
+  | `zoom+MouseButton1` | Zooms out Magnifier                                           |
+  | `zoom+MouseButton2` | Quits Magnifier                                               |
+
+  Note: `zoom` here refers to the zoom button on my mouse (Logitech Performance MX)
