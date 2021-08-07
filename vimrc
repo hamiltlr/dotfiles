@@ -194,6 +194,9 @@ map <F10> :echo "<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+" Make F12 clear the find highlight
+nnoremap <F12> :noh<cr>
+
 " Custom commands / functions
 
 " execute a command and show its output in a split window
