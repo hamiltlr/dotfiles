@@ -19,3 +19,6 @@ An autohotkey script that adds a few shortcuts that help me use my PC more effic
   | `zoom+MouseButton2` | Quits Magnifier                                               |
 
   Note: `zoom` here refers to the zoom button on my mouse (Logitech Performance MX)
+
+## freshtomato_update.sh
+A simple script to check for updates to my router firmware (FreshTomato) and post a message in Discord when a new version is detected.
