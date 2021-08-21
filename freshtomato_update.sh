@@ -17,7 +17,7 @@ function main {
     LATEST_VERSION=$(curl -s https://freshtomato.org/version.txt)
 
     # Get the version we saved last time this was run
-    if ! [[ -f $SAVED_VERSION ]]; then
+    if ! [[ -f $SAVE_FILE ]]; then
         # If this is the first run, set up the saved file
         echo $LATEST_VERSION > $SAVE_FILE
         SAVED_VERSION="$LATEST_VERSION"
