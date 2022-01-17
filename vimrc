@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline'        " The fancy tabline/statusline
 Plug 'frioux/vim-regedit'             " Visual register editing
 Plug 'udalov/kotlin-vim'              " Kotlin syntax
 Plug 'lervag/vimtex'                  " LaTeX plugin
+Plug 'dylon/vim-antlr'                " ANTLR syntax
 " SnipMate stuff:                     " Add text snippets
 Plug 'tomtom/tlib_vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -62,6 +63,7 @@ set guipty
 set showtabline=2 " always show the tab bar
 set hlsearch incsearch
 set nobomb
+set nowrap
 set autochdir
 set autoindent
 set tabstop=4
@@ -97,7 +99,7 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 "smarttab
 set ignorecase smartcase
 
 " Use the system clipboard for yank/paste
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Make splits open more intuitively
 set splitbelow splitright
